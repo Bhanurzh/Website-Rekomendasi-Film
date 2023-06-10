@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgba(0, 0, 0, 0.7) url('../images/banners/thor-banner.jpeg');
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 900px;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 10px 10px;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.poster-image{
+    position: relative;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.poster-image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-movie{
+    width: 400px;
+    padding: 0.5rem 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.movie-title{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+p{
+    text-align: justify;
+}
+
+p span{
+    margin-right: 10px;
+}
+
+.btn a{
+    margin-right: 30px;
+}
+
+.btn a i{
+    color: #AA1D1D;
+    font-size: 1.5rem;
+    background: transparent;
+}
+
+.btn a i:hover{
+    color: #fff;
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+}
+
+button{
+    display: inline-flex;
+    padding: 5px 20px;
+    border: 2px solid #AA1D1D;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #AA1D1D;
+    box-shadow: 0 0 5px #AA1D1D, 0 0 25px #AA1D1D, 0 0 50px #AA1D1D;
+    transition: all 0.3s ease 0s;
+}
+
+button i{
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.comment-section{
+    width: 300px;
+    padding: 1rem 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.comment-title{
+    display: flex;
+    justify-content: center;
+    color: #AA1D1D;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.user-comment{
+    display: flex;
+    flex-direction: row;
+}
+
+.user-comment img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-comment-tampil{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.user-comment-tampil img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.kolom-komentar{
+    font-size: 12px;
+}
+
+.kolom-komentar p{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+textarea{
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.kolom-komentar textarea{
+    color: #fff;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.nama-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.nama-user textarea{
+    outline: none;
+    border: none;
+}
+
+.send{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.send input{
+    padding: 5px 10px;
+    font-weight: 600;
+    color: #fff;
+    background: #AA1D1D;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.send input:hover{
+    background: #AA1D1D;
+    box-shadow: 0 0 5px #AA1D1D, 0 0 25px #AA1D1D, 0 0 50px #AA1D1D;
+    transition: all 0.3s ease 0s;
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.9);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer video{
+    max-width: 900px;
+    outline: none;
+    position: relative;
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+@media (max-width: 901px) {
+    .trailer video{
+        max-width: 90%;
+    }
+}
